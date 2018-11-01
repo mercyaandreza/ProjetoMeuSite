@@ -197,9 +197,8 @@ a{
 }
 
 tr:hover {
-	background-color:rgb(245, 186, 186);}
-
-	
+	background-color:rgb(245, 186, 186);
+}	
 	.button {
 		background-color:rgba(51, 51, 1, 0.3);
 		border-radius:19px 36px 0px 55px ;
@@ -213,12 +212,23 @@ tr:hover {
 		-webkit-transition-duration: 0.4s; /* Safari */
 		transition-duration: 0.4s;
 		border:none;
-	}
+}
 
-		
-	.button1:hover {
-		background-color: rgb(128, 0, 53);
-		color: white;
-		border: 7px solid black;
-	}
 	
+.button1:hover {
+	background-color: rgb(128, 0, 53);
+	color: white;
+	border: 7px solid black;
+}
+
+@media screen and (max-width: 992px){
+    .section p {
+		top: 0px;
+		text-align: center;
+		left: 0px;
+		width: auto;
+		position: initial;
+		margin: 15px;
+	}
+}
+
