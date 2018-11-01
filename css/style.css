@@ -1,0 +1,224 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 15px;
+	background: peru;
+	color: white;
+	overflow: hidden;
+	
+}
+.container{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.container >input,
+.container > span{
+	position: fixed;
+	bottom:0;
+	width: 20%;
+	height: 34px;
+	line-height: 34px;
+	cursor: pointer;
+}
+
+#radio-nav-1, #radio-nav-1+span{left:0;}
+#radio-nav-2, #radio-nav-2+span{left:20%;}
+#radio-nav-3, #radio-nav-3+span{left:40%;}
+#radio-nav-4, #radio-nav-4+span{left:60%;}
+#radio-nav-5, #radio-nav-5+span{left:80%;}
+
+#radio-nav-1:checked ~ .scroll{
+	transform: translateY(0%);
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+
+}
+
+#radio-nav-2:checked ~ .scroll{
+	transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+
+}
+
+#radio-nav-3:checked ~ .scroll{
+	transform: translateY(-200%);
+	-webkit-transform: translateY(-200%);
+	-moz-transform: translateY(-200%);
+
+}
+#radio-nav-4:checked ~ .scroll{
+	transform: translateY(-300%);
+	-webkit-transform: translateY(-300%);
+	-moz-transform: translateY(-300%);
+}
+#radio-nav-5:checked ~ .scroll{
+	transform: translateY(-400%);
+	-webkit-transform: translateY(-400%);
+	-moz-transform: translateY(-400%);
+
+	
+}
+.container > span{
+	font-size: 16px;
+	background-color: white;
+	font-weight: bold;
+	color:black;
+	text-align: center;
+	z-index: 10;
+	text-transform: uppercase;
+}
+
+.container > input{
+	z-index: 15;
+	opacity: 0;
+}
+
+.container > input:checked + span,
+.container > input:checked:hover + span{
+	background: rgba(250, 204, 204);
+	color: white;
+}
+
+.container > input:checked + span::after,
+.container > input:checked:hover + span::after{
+	content: "";	
+	width: 0;
+	height: 0;
+	position: absolute;
+	bottom: 100%;
+	border: solid transparent;
+	border-bottom-color:rgb(245, 186, 186);
+	border-width: 15px;
+	left: 50%;
+	margin-left: -15px;	
+}
+
+.container > input:hover +span{
+	background: rgb(245, 186, 186, 0.4);
+	color: black;	
+}
+
+#section-1{	background:rgb(128,128,0);}
+#section-2{	background:rgb(219, 144, 69, 0.3);}
+#section-3{	background:rgb(250, 128, 189);}
+#section-4{	background:rgb(210,105,30);}
+#section-5{	background:rgb(95,158,160);}
+
+.scroll, 
+.section{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top:0;
+	transition: all .6s ease-in;
+}
+.section{
+	/*Esconder "detalhe-quadrado branco de cada aba"*/
+	overflow: hidden;
+}
+
+.logo{
+	/*Formatação do quadrado*/
+	position: relative;
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+	background: white;
+	transform: translateY(-50%) rotate(5deg);
+	-webkit-transform:  translateY(-50%) rotate(5deg) ;
+	border-radius: 23px;
+}
+.logo span{
+	font-size: 15px;
+	position: absolute;
+	top: 150px;
+	left:72px;
+	color: black;
+	text-transform: uppercase;
+}
+.section h2{
+	position: absolute;
+	font-size: 20px;
+	text-align: left;
+	font-weight: bold;
+	top:50%;
+	margin-top: -290px;
+	width: 100%;
+	padding-left:34px;	
+	text-decoration: underline;
+}
+.section h3{	
+	font-size: 20px;	
+	padding-left:20px;
+	color: black;
+
+}
+
+.section p{
+	position: absolute;
+	width: 50%;
+	font-size: 20px;
+	text-align: center;
+	top: 50%;
+	left: 25%;
+	margin-top:10px ;
+	color: black;
+}
+.imagem{
+	float: right;	
+	width: 30%;
+}
+.section table {
+    border-collapse: collapse;
+	text-decoration: none;
+	margin-right:auto; 
+	margin-left:auto;
+}
+
+
+th, td {
+    padding: 8px;
+    text-align: left;
+	border-bottom: 1px solid #ddd;
+	text-decoration: none;
+	color:black;
+}
+a{
+	text-decoration: none;
+	color:black;
+}
+
+tr:hover {
+	background-color:rgb(245, 186, 186);}
+
+	
+	.button {
+		background-color:rgba(51, 51, 1, 0.3);
+		border-radius:19px 36px 0px 55px ;
+		color:black;
+		padding: 20px 52px;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 77px;
+		margin: 7px 2px 0px 66px;
+		cursor: pointer;
+		-webkit-transition-duration: 0.4s; /* Safari */
+		transition-duration: 0.4s;
+		border:none;
+	}
+
+		
+	.button1:hover {
+		background-color: rgb(128, 0, 53);
+		color: white;
+		border: 7px solid black;
+	}
+	
